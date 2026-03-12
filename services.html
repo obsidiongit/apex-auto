@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Apex Auto Studio</title>
+    <meta name="description"
+        content="Explore Apex Auto Studio's premium mobile detailing services. Exterior, interior, full, and executive detail packages starting at $149.">
+    <meta property="og:title" content="Our Services | Apex Auto Studio">
+    <meta property="og:description" content="Premium mobile auto detailing services in Denver. Starting at $149.">
+    <meta property="og:image" content="assets/opengraph.png">
+    <meta property="og:url" content="https://apexautostudio303.com/services.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-4xl) var(--space-xl);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+            letter-spacing: -0.02em;
+            color: var(--charcoal);
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: var(--charcoal);
+        }
+
+        .services-layout {
+            padding: var(--space-4xl) 0;
+            background: var(--white);
+        }
+
+        .service-detail-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            background: var(--off-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition-base);
+        }
+
+        @media (min-width: 768px) {
+            .service-detail-card {
+                grid-template-columns: 80px 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+
+        .service-detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+            background: var(--white);
+        }
+
+        .service-detail-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-detail-icon svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .service-detail-content h3 {
+            font-size: 1.75rem;
+            color: var(--charcoal);
+            margin-bottom: var(--space-xs);
+        }
+
+        .service-detail-content .detail-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .service-detail-content p {
+            color: var(--dark-gray);
+            margin-bottom: var(--space-lg);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: 0.95rem;
+            color: var(--mid-gray);
+        }
+
+        .service-features li svg {
+            width: 18px;
+            height: 18px;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        /* Add-ons Grid */
+        .addons-section {
+            padding: var(--space-4xl) 0;
+            background: var(--off-white);
+        }
+
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            max-width: 1000px;
+            margin: var(--space-2xl) auto 0;
+        }
+
+        .addon-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition-base);
+        }
+
+        .addon-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .addon-name {
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .addon-price {
+            font-weight: 700;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .addon-note {
+            text-align: center;
+            margin-top: var(--space-xl);
+            color: var(--mid-gray);
+            font-style: italic;
+        }
+
+        .cta-section {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: var(--space-4xl) 0;
+            text-align: center;
+            margin-top: var(--space-4xl);
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <a href="book.html" class="top-bar-link">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <span class="top-bar-text">$25 OFF YOUR FIRST DETAIL — BOOK TODAY</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Apex Auto Studio Home">
+                <img src="assets/logo.png" alt="Apex Auto Studio" class="nav-logo-img">
+            </a>
+            <div class="mobile-nav-controls">
+                <a href="tel:720-763-2136" class="mobile-phone-btn" aria-label="Call Us">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+
+                <li class="mobile-only"><a href="tel:720-763-2136" class="nav-phone-mobile">(720) 763-2136</a></li>
+                <li class="mobile-only"><a href="book.html" class="btn btn-nav-cta btn-full">BOOK NOW</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:720-763-2136" class="nav-phone">
+                    <div class="phone-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                        </svg>
+                    </div>
+                    <span>(720) 763-2136</span>
+                </a>
+                <a href="book.html" class="btn btn-nav-cta">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="hero-bg">
+            <video class="hero-video" id="servicesVideoPlayer" autoplay muted playsinline>
+                <source src="assets/alt1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1 class="page-title" style="color: var(--white);">Our Detailing Services</h1>
+            <p class="page-subtitle" style="color: rgba(255, 255, 255, 0.9);">Premium mobile auto detailing delivered to your driveway. Every service is
+                executed with meticulous care and professional-grade products.</p>
+        </div>
+    </header>
+
+    <!-- Services Content -->
+    <main class="services-layout">
+        <div class="container">
+
+            <!-- Service 1: Exterior Detail -->
+            <div class="service-detail-card">
+                <div class="service-detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <path d="M8 11l3 3 5-5"></path>
+                    </svg>
+                </div>
+                <div class="service-detail-content">
+                    <h3>Exterior Detail</h3>
+                    <p class="detail-price">Starting at $149</p>
+                    <p>A thorough exterior cleaning designed to safely remove dirt, road film, and contaminants while
+                        enhancing gloss and protection. Includes hand wash, wheel and tire cleaning, trim care, and a
+                        durable spray sealant for added shine and protection.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Hand Wash & Dry</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Wheel & Tire Cleaning</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Spray Sealant Protection</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+
+            <!-- Service 2: Interior Detail -->
+            <div class="service-detail-card">
+                <div class="service-detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                </div>
+                <div class="service-detail-content">
+                    <h3>Interior Detail</h3>
+                    <p class="detail-price">Starting at $199</p>
+                    <p>A complete interior reset focused on restoring cleanliness and comfort. Includes thorough
+                        vacuuming, surface cleaning, leather conditioning (if applicable), light stain treatment, and
+                        interior glass cleaning. Also includes trim and plastic dressing.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Deep Vacuuming</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Leather Conditioning</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Stain Treatment</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+
+            <!-- Service 3: Full Detail -->
+            <div class="service-detail-card">
+                <div class="service-detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <div class="service-detail-content">
+                    <h3>Full Detail</h3>
+                    <p class="detail-price">Starting at $299</p>
+                    <p>Our complete inside-and-out reset. This service combines a thorough interior cleaning with a
+                        meticulous exterior hand wash, wheel and tire care, trim treatment, and paint sealant for a
+                        clean, protected finish inside and out.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Complete Interior & Exterior</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Paint Sealant Protection</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Best Value Package</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+
+            <!-- Service 4: Executive Detail -->
+            <div class="service-detail-card">
+                <div class="service-detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="service-detail-content">
+                    <h3>Executive Detail</h3>
+                    <p class="detail-price">Starting at $449</p>
+                    <p>The ultimate interior and exterior reset. In addition to our Full Detail service, this package
+                        includes iron removal and clay bar paint decontamination with bug and tar treatment, deep carpet
+                        and upholstery extraction, targeted steam cleaning, advanced odor elimination, and a detailed
+                        engine bay cleaning.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Clay Bar Decontamination</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Deep Steam Cleaning</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Engine Bay Detail</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Add-Ons Section -->
+    <section class="addons-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Customize Your Detail</span>
+                <h2 class="section-title">Add-On <strong>Services</strong></h2>
+            </div>
+            <div class="addons-grid">
+                <div class="addon-card">
+                    <span class="addon-name">Engine Bay Detail</span>
+                    <span class="addon-price">Starting at $75</span>
+                </div>
+                <div class="addon-card">
+                    <span class="addon-name">Pet Hair Removal</span>
+                    <span class="addon-price">Starting at $50</span>
+                </div>
+                <div class="addon-card">
+                    <span class="addon-name">Carpet & Seat Extraction</span>
+                    <span class="addon-price">Starting at $85</span>
+                </div>
+                <div class="addon-card">
+                    <span class="addon-name">Steam Sanitation</span>
+                    <span class="addon-price">Starting at $65</span>
+                </div>
+                <div class="addon-card">
+                    <span class="addon-name">Paint Decontamination</span>
+                    <span class="addon-price">Starting at $145</span>
+                </div>
+                <div class="addon-card">
+                    <span class="addon-name">Odor Treatment</span>
+                    <span class="addon-price">Starting at $75</span>
+                </div>
+            </div>
+            <p class="addon-note">Final pricing subject to change depending on size and severity</p>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Experience the Apex Difference?</h2>
+            <a href="book.html" class="btn btn-primary btn-lg">Book Your Detail</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo" aria-label="Apex Auto Studio">
+                        <img src="assets/logo.png" alt="Apex Auto Studio" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">Premium Mobile Auto Detailing</p>
+                    <div class="footer-certifications">
+                        <span class="certification">✓ Licensed & Insured</span>
+                        <span class="certification">✓ 5-Star Rated</span>
+                        <span class="certification">✓ Free Estimates</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Exterior Detail</a></li>
+                        <li><a href="services.html">Interior Detail</a></li>
+                        <li><a href="services.html">Full Detail</a></li>
+                        <li><a href="services.html">Executive Detail</a></li>
+                        <li><a href="services.html">Paint Correction</a></li>
+                        <li><a href="services.html">Add-On Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="tel:720-763-2136">(720) 763-2136</a></p>
+                    <p><a href="mailto:chris@apexautostudio303.com">chris@apexautostudio303.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Apex Auto Studio. All rights reserved.</p>
+                <a href="https://www.obsidion.ai/" target="_blank" class="footer-credit">Built by Obsidion</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const videoPlayer = document.getElementById("servicesVideoPlayer");
+            if (videoPlayer) {
+                const playlist = ["assets/alt1.mp4", "assets/alt2.mp4"];
+                let currentVideoIndex = 0;
+
+                videoPlayer.addEventListener("ended", () => {
+                    currentVideoIndex = (currentVideoIndex + 1) % playlist.length;
+                    videoPlayer.src = playlist[currentVideoIndex];
+                    videoPlayer.play().catch(e => console.error("Error playing video:", e));
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Auto Studio | Premium Mobile Auto Detailing in Denver</title>
+    <meta name="description"
+        content="Apex Auto Studio delivers premium mobile auto detailing in Denver, Aurora, Lone Tree, and surrounding areas. Interior, exterior, and full detail packages starting at $149.">
+    <meta property="og:title" content="Apex Auto Studio | Premium Mobile Auto Detailing in Denver">
+    <meta property="og:description"
+        content="Premium mobile auto detailing in Denver and surrounding areas. Professional results at your doorstep.">
+    <meta property="og:image" content="assets/opengraph.png">
+    <meta property="og:url" content="https://apexautostudio303.com">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- $25 Off Popup -->
+    <div class="popup-overlay" id="discountPopup">
+        <div class="popup-container">
+            <button class="popup-close" id="popupClose" aria-label="Close popup">&times;</button>
+            <div class="popup-image">
+                <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=600&h=800&fit=crop"
+                    alt="Premium auto detailing">
+            </div>
+            <div class="popup-content">
+                <h2 class="popup-title">WOULD YOU LIKE</h2>
+                <p class="popup-amount">$25 OFF</p>
+                <h3 class="popup-subtitle">CAR DETAILING?</h3>
+                <p class="popup-desc">We Come To You!</p>
+                <form class="popup-form" id="popupForm">
+                    <input type="email" class="popup-input" placeholder="Email" required>
+                    <button type="submit" class="popup-btn">YES! I want the discount</button>
+                </form>
+                <button class="popup-dismiss" id="popupDismiss">N O , &nbsp; T H A N K S</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <a href="book.html" class="top-bar-link">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <span class="top-bar-text">$25 OFF YOUR FIRST DETAIL — BOOK TODAY</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="Apex Auto Studio Home">
+                <img src="assets/logo.png" alt="Apex Auto Studio" class="nav-logo-img">
+            </a>
+            <div class="mobile-nav-controls">
+                <a href="tel:720-763-2136" class="mobile-phone-btn" aria-label="Call Us">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+
+                <li class="mobile-only"><a href="tel:720-763-2136" class="nav-phone-mobile">(720) 763-2136</a></li>
+                <li class="mobile-only"><a href="book.html" class="btn btn-nav-cta btn-full">BOOK NOW</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:720-763-2136" class="nav-phone">
+                    <div class="phone-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                        </svg>
+                    </div>
+                    <span>(720) 763-2136</span>
+                </a>
+                <a href="book.html" class="btn btn-nav-cta">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <video class="hero-video" id="heroVideoPlayer" autoplay muted playsinline>
+                <source src="assets/hero1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-label">Apex Auto Studio • Mobile Detailing Est. 2026</span>
+                <h1 class="hero-title">Premium Mobile Auto Detailing, Done Right.</h1>
+                <div class="hero-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span>Professional-Grade Products</span>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span>100% Satisfaction Guaranteed</span>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span>Meticulous Attention to Detail</span>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span>We Come To You</span>
+                    </div>
+                </div>
+                <div class="hero-cta-wrapper">
+                    <a href="book.html" class="btn btn-primary btn-lg">BOOK NOW</a>
+                    <a href="tel:720-763-2136" class="btn btn-primary btn-lg">CALL (720) 763-2136</a>
+                </div>
+                <div class="hero-badges">
+                    <!-- Google Badge -->
+                    <div class="badge">
+                        <div class="badge-icon google">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path
+                                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path
+                                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path
+                                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                        <div class="badge-content">
+                            <span class="badge-rating">5.0 <span class="stars">★★★★★</span></span>
+                            <span class="badge-label">5-Star Service</span>
+                        </div>
+                    </div>
+
+                    <!-- Facebook Badge -->
+                    <div class="badge">
+                        <div class="badge-icon facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </div>
+                        <div class="badge-content">
+                            <span class="badge-rating">5.0 <span class="stars">★★★★★</span></span>
+                            <span class="badge-label">Community Rated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Scrolling Reviews Section -->
+    <section class="scrolling-reviews" id="scrolling-reviews">
+        <div class="scrolling-reviews-container">
+            <div class="scrolling-reviews-track">
+                <div class="reviews-group">
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JD</div>
+                            <div>
+                                <div class="reviewer-name">John D.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Apex Auto Studio brought my car back to life! The interior looks brand new. Highly recommend their mobile service."</p>
+                </div>
+                <!-- Add a few more unique reviews -->
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MS</div>
+                            <div>
+                                <div class="reviewer-name">Michael S.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Incredible attention to detail. The ceramic coating they applied made the paint look like glass. Best in Denver!"</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AL</div>
+                            <div>
+                                <div class="reviewer-name">Amanda L.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"So convenient! They came right to my office and detailed my car while I worked. Super professional and worth every penny."</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">TB</div>
+                            <div>
+                                <div class="reviewer-name">Tyler B.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Chris is a true professional. He was on time, communicated well, and transformed my truck exterior. 5-star service for sure."</p>
+                </div>
+                <!-- Duplicate group to ensure seamless scroll -->
+                </div>
+                <div class="reviews-group" aria-hidden="true">
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JD</div>
+                            <div>
+                                <div class="reviewer-name">John D.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Apex Auto Studio brought my car back to life! The interior looks brand new. Highly recommend their mobile service."</p>
+                </div>
+                <!-- Add a few more unique reviews -->
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MS</div>
+                            <div>
+                                <div class="reviewer-name">Michael S.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Incredible attention to detail. The ceramic coating they applied made the paint look like glass. Best in Denver!"</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AL</div>
+                            <div>
+                                <div class="reviewer-name">Amanda L.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"So convenient! They came right to my office and detailed my car while I worked. Super professional and worth every penny."</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">TB</div>
+                            <div>
+                                <div class="reviewer-name">Tyler B.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Chris is a true professional. He was on time, communicated well, and transformed my truck exterior. 5-star service for sure."</p>
+                </div>
+                <!-- Duplicate group to ensure seamless scroll -->
+                </div>
+                <div class="reviews-group" aria-hidden="true">
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JD</div>
+                            <div>
+                                <div class="reviewer-name">John D.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Apex Auto Studio brought my car back to life! The interior looks brand new. Highly recommend their mobile service."</p>
+                </div>
+                <!-- Add a few more unique reviews -->
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MS</div>
+                            <div>
+                                <div class="reviewer-name">Michael S.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Incredible attention to detail. The ceramic coating they applied made the paint look like glass. Best in Denver!"</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AL</div>
+                            <div>
+                                <div class="reviewer-name">Amanda L.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"So convenient! They came right to my office and detailed my car while I worked. Super professional and worth every penny."</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">TB</div>
+                            <div>
+                                <div class="reviewer-name">Tyler B.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Chris is a true professional. He was on time, communicated well, and transformed my truck exterior. 5-star service for sure."</p>
+                </div>
+                <!-- Duplicate group to ensure seamless scroll -->
+                </div>
+                <div class="reviews-group" aria-hidden="true">
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JD</div>
+                            <div>
+                                <div class="reviewer-name">John D.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Apex Auto Studio brought my car back to life! The interior looks brand new. Highly recommend their mobile service."</p>
+                </div>
+                <!-- Add a few more unique reviews -->
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MS</div>
+                            <div>
+                                <div class="reviewer-name">Michael S.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Incredible attention to detail. The ceramic coating they applied made the paint look like glass. Best in Denver!"</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AL</div>
+                            <div>
+                                <div class="reviewer-name">Amanda L.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"So convenient! They came right to my office and detailed my car while I worked. Super professional and worth every penny."</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">TB</div>
+                            <div>
+                                <div class="reviewer-name">Tyler B.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Chris is a true professional. He was on time, communicated well, and transformed my truck exterior. 5-star service for sure."</p>
+                </div>
+                <!-- Duplicate group to ensure seamless scroll -->
+                </div>
+                <div class="reviews-group" aria-hidden="true">
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JD</div>
+                            <div>
+                                <div class="reviewer-name">John D.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Apex Auto Studio brought my car back to life! The interior looks brand new. Highly recommend their mobile service."</p>
+                </div>
+                <!-- Add a few more unique reviews -->
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MS</div>
+                            <div>
+                                <div class="reviewer-name">Michael S.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Incredible attention to detail. The ceramic coating they applied made the paint look like glass. Best in Denver!"</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AL</div>
+                            <div>
+                                <div class="reviewer-name">Amanda L.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"So convenient! They came right to my office and detailed my car while I worked. Super professional and worth every penny."</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">TB</div>
+                            <div>
+                                <div class="reviewer-name">Tyler B.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Chris is a true professional. He was on time, communicated well, and transformed my truck exterior. 5-star service for sure."</p>
+                </div>
+                <!-- Duplicate group to ensure seamless scroll -->
+                </div>
+                <div class="reviews-group" aria-hidden="true">
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JD</div>
+                            <div>
+                                <div class="reviewer-name">John D.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Apex Auto Studio brought my car back to life! The interior looks brand new. Highly recommend their mobile service."</p>
+                </div>
+                <!-- Add a few more unique reviews -->
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MS</div>
+                            <div>
+                                <div class="reviewer-name">Michael S.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Incredible attention to detail. The ceramic coating they applied made the paint look like glass. Best in Denver!"</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AL</div>
+                            <div>
+                                <div class="reviewer-name">Amanda L.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"So convenient! They came right to my office and detailed my car while I worked. Super professional and worth every penny."</p>
+                </div>
+                <div class="scrolling-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">TB</div>
+                            <div>
+                                <div class="reviewer-name">Tyler B.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="review-text">"Chris is a true professional. He was on time, communicated well, and transformed my truck exterior. 5-star service for sure."</p>
+                </div>
+                <!-- Duplicate group to ensure seamless scroll -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What We Offer</span>
+                <h2 class="section-title">Our Detailing Services</h2>
+                <p class="section-desc">From quick refreshes to full restorations, Apex Auto Studio delivers
+                    professional-grade mobile detailing directly to your driveway. Every service is executed with
+                    meticulous care and premium products.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M8 11l3 3 5-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Exterior Detail</h3>
+                    <p class="service-price">Starting at $149</p>
+                    <p class="service-desc">Hand wash, wheel and tire cleaning, trim care, and a durable spray sealant
+                        for added shine and protection.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Interior Detail</h3>
+                    <p class="service-price">Starting at $199</p>
+                    <p class="service-desc">Thorough vacuuming, surface cleaning, leather conditioning, light stain
+                        treatment, and interior glass cleaning.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Full Detail</h3>
+                    <p class="service-price">Starting at $299</p>
+                    <p class="service-desc">Our complete inside-and-out reset combining thorough interior cleaning with
+                        meticulous exterior hand wash and paint sealant.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Executive Detail</h3>
+                    <p class="service-price">Starting at $449</p>
+                    <p class="service-desc">The ultimate reset: clay bar decontamination, deep extraction, steam
+                        cleaning, odor elimination, and engine bay cleaning.</p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Paint Correction</h3>
+                    <p class="service-price">Custom Quote</p>
+                    <p class="service-desc">Multi-stage machine polishing to eliminate swirl marks and scratches,
+                        restoring a true mirror-like reflection to your clear coat.</p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Add-On Services</h3>
+                    <p class="service-price">Starting at $50</p>
+                    <p class="service-desc">Engine bay detail, pet hair removal, carpet extraction, steam sanitation,
+                        paint decontamination, and odor treatment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">Meet Chris — Owner & Founder</h2>
+                    <p class="about-text">I'm Chris, founder of Apex Auto Studio. After years of being passionate about
+                        cars and pursuing perfection, I launched Apex in 2026 to bring premium-level detailing straight
+                        to your driveway—no shop visit required.</p>
+                    <p class="about-text">At Apex, we believe your car is your daily sanctuary. Whether you drive a
+                        daily commuter or a weekend collector, we treat every vehicle with the same level of care and
+                        precision. When you choose us, you're getting a detailing experience that restores your interior
+                        to that brand-new feeling.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">2026</span>
+                            <span class="stat-label">Established</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5.0</span>
+                            <span class="stat-label">Star Rating</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-image">
+                        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=600&h=500&fit=crop"
+                            alt="Apex Auto Studio - Premium mobile detailing" class="owner-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Customer Reviews</span>
+                <h2 class="section-title">What Our <strong>Clients Say</strong></h2>
+            </div>
+            <div class="featured-review">
+                <div class="featured-review-card">
+                    <div class="featured-review-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <div class="featured-review-content">
+                        <p class="featured-review-quote">"A truly premium mobile experience."</p>
+                        <p class="featured-review-text">"The attention to detail on my Porsche was unmatched. It looks
+                            better than the day I took delivery. Professional, punctual, and precise—Apex Auto Studio
+                            understands luxury care better than any shop I've used in the city. The finish is flawless."
+                        </p>
+                        <div class="featured-review-author">
+                            <div class="featured-author-avatar">RH</div>
+                            <div class="featured-author-info">
+                                <span class="featured-author-name">Robert H.</span>
+                                <span class="featured-author-service">Porsche Collector</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-review-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5.0 Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Grid -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Professional, punctual, and precise. Apex Auto Studio understands
+                        luxury care better than any shop I've used in the city. The finish is flawless."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SD</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah D.</span>
+                            <span class="author-location">Corporate Executive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"A transformational service. They treated my vintage Mercedes with
+                        surgical care at my own residence. Truly artisanal work."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JV</div>
+                        <div class="author-info">
+                            <span class="author-name">Julian V.</span>
+                            <span class="author-location">Architect</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I was blown away by the interior reset. My car hadn't been that clean
+                        since I drove it off the lot. Chris and the team went above and beyond."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <span class="author-name">Marcus K.</span>
+                            <span class="author-location">Full Detail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Club Section -->
+    <section class="membership-club" id="membership">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Save More, Shine More</span>
+                <h2 class="section-title">The Apex <strong>Detail Club</strong></h2>
+                <p class="section-desc">Say goodbye to weekend car cleaning and hello to effortless shine. As a member
+                    of The Apex Detail Club, you'll unlock exclusive discounts with our special membership pricing.
+                    Choose
+                    a plan that works for you.</p>
+            </div>
+            <div class="membership-grid">
+                <!-- Monthly Plan -->
+                <div class="membership-card">
+                    <div class="membership-header">
+                        <h3 class="membership-plan">Monthly</h3>
+                        <p class="membership-savings">Save $80 per detail</p>
+                    </div>
+                    <div class="membership-price">
+                        <span class="price-symbol">$</span>
+                        <span class="price-amount">117</span>
+                        <span class="price-period">/monthly</span>
+                    </div>
+                    <ul class="membership-features">
+                        <li>1 Interior Detail Per Month</li>
+                        <li>Complimentary Exterior Wash</li>
+                        <li>No Contracts</li>
+                        <li>Priority Scheduling</li>
+                        <li>Prices vary based on vehicle size</li>
+                        <li>Join and Save Today</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-secondary">Learn More</a>
+                </div>
+                <!-- Bi-Monthly Plan (Featured) -->
+                <div class="membership-card featured">
+                    <div class="membership-badge">Most Popular</div>
+                    <div class="membership-header">
+                        <h3 class="membership-plan">Bi-Monthly</h3>
+                        <p class="membership-savings">Save $50 per detail</p>
+                    </div>
+                    <div class="membership-price">
+                        <span class="price-symbol">$</span>
+                        <span class="price-amount">147</span>
+                        <span class="price-period">/bi-monthly</span>
+                    </div>
+                    <ul class="membership-features">
+                        <li>1 Interior Detail Bi-Monthly</li>
+                        <li>Complimentary Exterior Wash</li>
+                        <li>No Contracts</li>
+                        <li>Priority Scheduling</li>
+                        <li>Prices vary based on vehicle size</li>
+                        <li>Join and Save Today</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-primary">Learn More</a>
+                </div>
+                <!-- Quarterly Plan -->
+                <div class="membership-card">
+                    <div class="membership-header">
+                        <h3 class="membership-plan">Quarterly</h3>
+                        <p class="membership-savings">Save $30 per detail</p>
+                    </div>
+                    <div class="membership-price">
+                        <span class="price-symbol">$</span>
+                        <span class="price-amount">167</span>
+                        <span class="price-period">/quarterly</span>
+                    </div>
+                    <ul class="membership-features">
+                        <li>1 Interior Detail Per Quarter</li>
+                        <li>Complimentary Exterior Wash</li>
+                        <li>No Contracts</li>
+                        <li>Priority Scheduling</li>
+                        <li>Prices vary based on vehicle size</li>
+                        <li>Join and Save Today</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Denver Map -->
+    <section class="contact" id="contact" style="padding: 0; line-height: 0;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.1345465947!2d-105.08816654273574!3d39.76451867140889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C%20CO!5e0!3m2!1sen!2sus!4v1709400000000!5m2!1sen!2sus" width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo" aria-label="Apex Auto Studio">
+                        <img src="assets/logo.png" alt="Apex Auto Studio" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">Premium Mobile Auto Detailing</p>
+                    <div class="footer-certifications">
+                        <span class="certification">✓ Licensed & Insured</span>
+                        <span class="certification">✓ 5-Star Rated</span>
+                        <span class="certification">✓ Free Estimates</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Exterior Detail</a></li>
+                        <li><a href="services.html">Interior Detail</a></li>
+                        <li><a href="services.html">Full Detail</a></li>
+                        <li><a href="services.html">Executive Detail</a></li>
+                        <li><a href="services.html">Paint Correction</a></li>
+                        <li><a href="services.html">Add-On Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="tel:720-763-2136">(720) 763-2136</a></p>
+                    <p><a href="mailto:chris@apexautostudio303.com">chris@apexautostudio303.com</a></p>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Apex Auto Studio. All rights reserved.</p>
+                <a href="https://www.obsidion.ai/" target="_blank" class="footer-credit">Built by Obsidion</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

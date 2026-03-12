@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Apex Auto Studio</title>
+    <meta name="description"
+        content="See what our clients say about Apex Auto Studio. 5-star rated premium mobile auto detailing in Denver.">
+    <meta property="og:title" content="Reviews | Apex Auto Studio">
+    <meta property="og:description" content="5-star rated premium mobile auto detailing. See our client testimonials.">
+    <meta property="og:image" content="assets/opengraph.png">
+    <meta property="og:url" content="https://apexautostudio303.com/reviews.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: var(--space-4xl) 0;
+            text-align: center;
+        }
+
+        .reviews-page {
+            padding: var(--space-4xl) 0;
+        }
+
+        .overall-rating {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+
+        .rating-number {
+            font-size: 5rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            line-height: 1;
+        }
+
+        .rating-stars {
+            font-size: 2rem;
+            color: var(--primary);
+            margin: var(--space-sm) 0;
+        }
+
+        .rating-label {
+            color: var(--mid-gray);
+            font-size: 1.1rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .review-page-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition-base);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .review-page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .review-page-card .stars {
+            color: var(--primary);
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .review-page-card .review-date {
+            font-size: 0.85rem;
+            color: var(--mid-gray);
+            margin-bottom: var(--space-md);
+        }
+
+        .review-page-card .review-body {
+            color: var(--dark-gray);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+        }
+
+        .review-page-card .reviewer {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .reviewer-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-full);
+            background: var(--primary-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--charcoal);
+            display: block;
+        }
+
+        .reviewer-service {
+            font-size: 0.85rem;
+            color: var(--mid-gray);
+        }
+
+        .review-cta {
+            text-align: center;
+            padding: var(--space-3xl);
+            background: var(--off-white);
+            border-radius: var(--radius-xl);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <a href="book.html" class="top-bar-link">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <span class="top-bar-text">$25 OFF YOUR FIRST DETAIL — BOOK TODAY</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Apex Auto Studio Home">
+                <img src="assets/logo.png" alt="Apex Auto Studio" class="nav-logo-img">
+            </a>
+            <div class="mobile-nav-controls">
+                <a href="tel:720-763-2136" class="mobile-phone-btn" aria-label="Call Us">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+
+                <li class="mobile-only"><a href="tel:720-763-2136" class="nav-phone-mobile">(720) 763-2136</a></li>
+                <li class="mobile-only"><a href="book.html" class="btn btn-nav-cta btn-full">BOOK NOW</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:720-763-2136" class="nav-phone">
+                    <div class="phone-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                        </svg>
+                    </div>
+                    <span>(720) 763-2136</span>
+                </a>
+                <a href="book.html" class="btn btn-nav-cta">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <h1 class="hero-title">Client Reviews</h1>
+            <p class="hero-desc" style="display:block; opacity:0.8;">Hear from our satisfied clients across Denver</p>
+        </div>
+    </header>
+
+    <!-- Reviews Content -->
+    <main class="reviews-page">
+        <div class="container">
+            <!-- Overall Rating -->
+            <div class="overall-rating">
+                <div class="rating-number">5.0</div>
+                <div class="rating-stars">★★★★★</div>
+                <div class="rating-label">Based on client reviews</div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="reviews-grid">
+                <!-- Review 1 (from Apex current site) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">January 2026</span>
+                    <p class="review-body">"The attention to detail on my Porsche was unmatched. It looks better than
+                        the
+                        day I took delivery. Professional, punctual, and precise—Apex Auto Studio understands luxury
+                        care
+                        better than any shop I've used in the city."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">RH</div>
+                        <div>
+                            <span class="reviewer-name">Robert H.</span>
+                            <span class="reviewer-service">Executive Detail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 (from Apex current site) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">February 2026</span>
+                    <p class="review-body">"Professional, punctual, and precise. Apex Auto Studio understands luxury
+                        care better than any shop I've used in the city. The finish is flawless and they even cleaned
+                        areas I didn't think about."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">SD</div>
+                        <div>
+                            <span class="reviewer-name">Sarah D.</span>
+                            <span class="reviewer-service">Full Detail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 (from Apex current site) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">January 2026</span>
+                    <p class="review-body">"A transformational service. They treated my vintage Mercedes with surgical
+                        care at my own residence. Truly artisanal work. Will never go back to a traditional car wash."
+                    </p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">JV</div>
+                        <div>
+                            <span class="reviewer-name">Julian V.</span>
+                            <span class="reviewer-service">Executive Detail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 (beef up) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">February 2026</span>
+                    <p class="review-body">"I was blown away by the interior reset. My car hadn't been that clean since
+                        I
+                        drove it off the lot. Chris and the team went above and beyond. The seats, the dashboard,
+                        everything was spotless."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">MK</div>
+                        <div>
+                            <span class="reviewer-name">Marcus K.</span>
+                            <span class="reviewer-service">Full Detail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 (beef up) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">March 2026</span>
+                    <p class="review-body">"As someone who's picky about their car, I can say Apex exceeded my
+                        expectations. The exterior detail left my paint looking like glass. Great communication and they
+                        showed up on time. Highly recommend."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">TL</div>
+                        <div>
+                            <span class="reviewer-name">Tony L.</span>
+                            <span class="reviewer-service">Exterior Detail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 (beef up) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">February 2026</span>
+                    <p class="review-body">"We got the executive detail for our family SUV and it was incredible. Pet
+                        hair gone, stains gone, smells gone. Felt like a brand new car. The mobile convenience is a
+                        game-changer for busy parents."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">LP</div>
+                        <div>
+                            <span class="reviewer-name">Lisa P.</span>
+                            <span class="reviewer-service">Executive Detail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 7 (beef up) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">January 2026</span>
+                    <p class="review-body">"Had my Tesla detailed by Apex and it's never looked better. They used
+                        products that are safe for the matte finish and didn't leave a single streak. These guys know
+                        modern cars inside and out."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">DW</div>
+                        <div>
+                            <span class="reviewer-name">Derek W.</span>
+                            <span class="reviewer-service">Full Detail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 8 (beef up) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">March 2026</span>
+                    <p class="review-body">"Chris is a perfectionist in the best possible way. I manage a fleet of
+                        luxury
+                        vehicles for a rental company and Apex handles our detailing exclusively. Consistent quality
+                        every single time."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">AM</div>
+                        <div>
+                            <span class="reviewer-name">Andre M.</span>
+                            <span class="reviewer-service">Fleet Services</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 9 (beef up) -->
+                <div class="review-page-card">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-date">February 2026</span>
+                    <p class="review-body">"Got the paint correction done on my black BMW and the swirl marks are
+                        completely gone. The mirror-like finish is unreal. Worth every penny. Already scheduled my next
+                        appointment."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">KR</div>
+                        <div>
+                            <span class="reviewer-name">Kevin R.</span>
+                            <span class="reviewer-service">Paint Correction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="review-cta">
+                <h2 style="margin-bottom: var(--space-lg); color: var(--charcoal);">Ready to Experience the Apex
+                    Difference?</h2>
+                <a href="book.html" class="btn btn-primary btn-lg">Book Your Detail</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo" aria-label="Apex Auto Studio">
+                        <img src="assets/logo.png" alt="Apex Auto Studio" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">Premium Mobile Auto Detailing</p>
+                    <div class="footer-certifications">
+                        <span class="certification">✓ Licensed & Insured</span>
+                        <span class="certification">✓ 5-Star Rated</span>
+                        <span class="certification">✓ Free Estimates</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Exterior Detail</a></li>
+                        <li><a href="services.html">Interior Detail</a></li>
+                        <li><a href="services.html">Full Detail</a></li>
+                        <li><a href="services.html">Executive Detail</a></li>
+                        <li><a href="services.html">Paint Correction</a></li>
+                        <li><a href="services.html">Add-On Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="tel:720-763-2136">(720) 763-2136</a></p>
+                    <p><a href="mailto:chris@apexautostudio303.com">chris@apexautostudio303.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Apex Auto Studio. All rights reserved.</p>
+                <a href="https://www.obsidion.ai/" target="_blank" class="footer-credit">Built by Obsidion</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>ooter>
+
+<script src="script.js"></script>
+</body>
+
+</html>

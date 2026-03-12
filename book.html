@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Detail | Apex Auto Studio</title>
+    <meta name="description"
+        content="Book your premium mobile auto detailing appointment online. Choose your service, pick a date, and we'll come to you. Serving Denver and surrounding areas.">
+    <meta property="og:title" content="Book Your Detail | Apex Auto Studio">
+    <meta property="og:description"
+        content="Schedule your mobile detailing appointment online. Premium service at your doorstep.">
+    <meta property="og:image" content="assets/opengraph.png">
+    <meta property="og:url" content="https://apexautostudio303.com/book.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <a href="book.html" class="top-bar-link">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <span class="top-bar-text">$25 OFF YOUR FIRST DETAIL — BOOK TODAY</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Apex Auto Studio Home">
+                <img src="assets/logo.png" alt="Apex Auto Studio" class="nav-logo-img">
+            </a>
+            <div class="mobile-nav-controls">
+                <a href="tel:720-763-2136" class="mobile-phone-btn" aria-label="Call Us">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+
+                <li class="mobile-only"><a href="tel:720-763-2136" class="nav-phone-mobile">(720) 763-2136</a></li>
+                <li class="mobile-only"><a href="book.html" class="btn btn-nav-cta btn-full">BOOK NOW</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:720-763-2136" class="nav-phone">
+                    <div class="phone-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                        </svg>
+                    </div>
+                    <span>(720) 763-2136</span>
+                </a>
+                <a href="book.html" class="btn btn-nav-cta">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <header class="booking-hero">
+        <div class="container">
+            <h1 class="booking-hero-title">Book Your Detail</h1>
+            <p class="booking-hero-desc">Select your service, pick a date & time, and we'll handle the rest.</p>
+        </div>
+    </header>
+
+    <!-- Booking Steps Indicator -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-steps-indicator">
+                <div class="step-item active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span class="step-label">Select Service</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="2">
+                    <div class="step-number">2</div>
+                    <span class="step-label">Date & Time</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="3">
+                    <div class="step-number">3</div>
+                    <span class="step-label">Your Info</span>
+                </div>
+            </div>
+
+            <div class="booking-layout">
+                <!-- Main Booking Area -->
+                <div class="booking-main">
+                    <!-- Step 1: Service Selection -->
+                    <div class="booking-step active" id="bookingStep1">
+                        <h2 class="booking-step-title">Choose Your Service</h2>
+                        <p class="booking-step-desc">Select the detailing package that's right for your vehicle.</p>
+                        <div class="booking-services-grid">
+                            <div class="booking-service-card" data-service="exterior" data-price="149">
+                                <div class="booking-service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="M8 11l3 3 5-5"></path>
+                                    </svg>
+                                </div>
+                                <div class="booking-service-info">
+                                    <h3>Exterior Detail</h3>
+                                    <p>Hand wash, wheel cleaning, trim care, spray sealant</p>
+                                </div>
+                                <div class="booking-service-price">
+                                    <span class="price-from">From</span>
+                                    <span class="price-value">$149</span>
+                                </div>
+                                <div class="booking-service-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="booking-service-card" data-service="interior" data-price="199">
+                                <div class="booking-service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                                    </svg>
+                                </div>
+                                <div class="booking-service-info">
+                                    <h3>Interior Detail</h3>
+                                    <p>Vacuuming, surface cleaning, leather care, glass cleaning</p>
+                                </div>
+                                <div class="booking-service-price">
+                                    <span class="price-from">From</span>
+                                    <span class="price-value">$199</span>
+                                </div>
+                                <div class="booking-service-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="booking-service-card popular" data-service="full" data-price="299">
+                                <div class="booking-service-popular-tag">Most Popular</div>
+                                <div class="booking-service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="booking-service-info">
+                                    <h3>Full Detail</h3>
+                                    <p>Complete inside-and-out reset with hand wash & sealant</p>
+                                </div>
+                                <div class="booking-service-price">
+                                    <span class="price-from">From</span>
+                                    <span class="price-value">$299</span>
+                                </div>
+                                <div class="booking-service-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="booking-service-card" data-service="executive" data-price="449">
+                                <div class="booking-service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="booking-service-info">
+                                    <h3>Executive Detail</h3>
+                                    <p>Clay bar, deep extraction, steam cleaning, engine bay</p>
+                                </div>
+                                <div class="booking-service-price">
+                                    <span class="price-from">From</span>
+                                    <span class="price-value">$449</span>
+                                </div>
+                                <div class="booking-service-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="booking-service-card" data-service="paint" data-price="0">
+                                <div class="booking-service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                </div>
+                                <div class="booking-service-info">
+                                    <h3>Paint Correction</h3>
+                                    <p>Multi-stage polishing to remove swirls & scratches</p>
+                                </div>
+                                <div class="booking-service-price">
+                                    <span class="price-from">&nbsp;</span>
+                                    <span class="price-value">Custom</span>
+                                </div>
+                                <div class="booking-service-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-step-actions">
+                            <button class="btn btn-primary btn-lg booking-next-btn" id="step1Next" disabled>
+                                Continue to Date & Time
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                                    height="20">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Date & Time -->
+                    <div class="booking-step" id="bookingStep2">
+                        <h2 class="booking-step-title">Pick a Date & Time</h2>
+                        <p class="booking-step-desc">Select your preferred appointment date and time window.</p>
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button class="calendar-nav-btn" id="calendarPrev" aria-label="Previous month">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                    </svg>
+                                </button>
+                                <h3 class="calendar-month-title" id="calendarTitle"></h3>
+                                <button class="calendar-nav-btn" id="calendarNext" aria-label="Next month">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="calendar-weekdays">
+                                <span>Sun</span>
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                            </div>
+                            <div class="calendar-grid" id="calendarGrid"></div>
+                        </div>
+                        <div class="time-slots-section">
+                            <h3 class="time-slots-title">Select a Time</h3>
+                            <div class="time-slots-grid" id="timeSlots">
+                                <button class="time-slot" data-time="8:00 AM">8:00 AM</button>
+                                <button class="time-slot" data-time="9:00 AM">9:00 AM</button>
+                                <button class="time-slot" data-time="10:00 AM">10:00 AM</button>
+                                <button class="time-slot" data-time="11:00 AM">11:00 AM</button>
+                                <button class="time-slot" data-time="12:00 PM">12:00 PM</button>
+                                <button class="time-slot" data-time="1:00 PM">1:00 PM</button>
+                                <button class="time-slot" data-time="2:00 PM">2:00 PM</button>
+                                <button class="time-slot" data-time="3:00 PM">3:00 PM</button>
+                                <button class="time-slot" data-time="4:00 PM">4:00 PM</button>
+                                <button class="time-slot" data-time="5:00 PM">5:00 PM</button>
+                            </div>
+                        </div>
+                        <div class="booking-step-actions">
+                            <button class="btn btn-secondary booking-back-btn" id="step2Back">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                                    height="20">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="btn btn-primary btn-lg booking-next-btn" id="step2Next" disabled>
+                                Continue to Your Info
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                                    height="20">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact Info -->
+                    <div class="booking-step" id="bookingStep3">
+                        <h2 class="booking-step-title">Your Information</h2>
+                        <p class="booking-step-desc">Fill in your details so we can confirm your appointment.</p>
+                        <form id="bookingForm" class="booking-contact-form">
+                            <div class="lead-form-row">
+                                <div class="lead-form-group">
+                                    <label for="bookName">Full Name *</label>
+                                    <input type="text" id="bookName" name="name" placeholder="Your name" required>
+                                </div>
+                                <div class="lead-form-group">
+                                    <label for="bookPhone">Phone *</label>
+                                    <input type="tel" id="bookPhone" name="phone" placeholder="(720) 555-0000"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="lead-form-group">
+                                <label for="bookEmail">Email</label>
+                                <input type="email" id="bookEmail" name="email" placeholder="you@email.com">
+                            </div>
+                            <div class="lead-form-group">
+                                <label for="bookVehicle">Vehicle Year, Make & Model *</label>
+                                <input type="text" id="bookVehicle" name="vehicle" placeholder="e.g. 2024 BMW X5"
+                                    required>
+                            </div>
+                            <div class="lead-form-group">
+                                <label for="bookAddress">Service Address</label>
+                                <input type="text" id="bookAddress" name="address"
+                                    placeholder="Where should we come?">
+                            </div>
+                            <div class="lead-form-group">
+                                <label for="bookNotes">Additional Notes</label>
+                                <textarea id="bookNotes" name="notes"
+                                    placeholder="Anything else we should know?"></textarea>
+                            </div>
+                        </form>
+                        <div class="booking-step-actions">
+                            <button class="btn btn-secondary booking-back-btn" id="step3Back">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                                    height="20">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="btn btn-primary btn-lg booking-submit-btn" id="bookingSubmit">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                                    height="20">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Confirm Booking
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Summary Sidebar -->
+                <aside class="booking-summary" id="bookingSummary">
+                    <h3 class="booking-summary-title">Booking Summary</h3>
+                    <div class="booking-summary-items">
+                        <div class="summary-item" id="summaryService">
+                            <span class="summary-label">Service</span>
+                            <span class="summary-value" id="summaryServiceValue">—</span>
+                        </div>
+                        <div class="summary-item" id="summaryDate">
+                            <span class="summary-label">Date</span>
+                            <span class="summary-value" id="summaryDateValue">—</span>
+                        </div>
+                        <div class="summary-item" id="summaryTime">
+                            <span class="summary-label">Time</span>
+                            <span class="summary-value" id="summaryTimeValue">—</span>
+                        </div>
+                        <div class="summary-item" id="summaryPrice">
+                            <span class="summary-label">Estimated Price</span>
+                            <span class="summary-value summary-price" id="summaryPriceValue">—</span>
+                        </div>
+                    </div>
+                    <div class="booking-summary-note">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <span>Final pricing may vary based on vehicle size and condition.</span>
+                    </div>
+                    <div class="booking-summary-contact">
+                        <p>Questions? Call us:</p>
+                        <a href="tel:720-763-2136" class="summary-phone">(720) 763-2136</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="booking-modal-overlay" id="bookingModal">
+        <div class="booking-modal">
+            <div class="booking-modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h2 class="booking-modal-title">Booking Confirmed!</h2>
+            <p class="booking-modal-desc">We've received your appointment request. You'll receive a confirmation call or
+                text shortly.</p>
+            <div class="booking-modal-details" id="modalDetails"></div>
+            <div class="booking-modal-actions">
+                <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
+                <button class="btn btn-secondary" id="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo" aria-label="Apex Auto Studio">
+                        <img src="assets/logo.png" alt="Apex Auto Studio" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">Premium Mobile Auto Detailing</p>
+                    <div class="footer-certifications">
+                        <span class="certification">✓ Licensed & Insured</span>
+                        <span class="certification">✓ 5-Star Rated</span>
+                        <span class="certification">✓ Free Estimates</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+
+                        <li><a href="book.html">Book Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Exterior Detail</a></li>
+                        <li><a href="services.html">Interior Detail</a></li>
+                        <li><a href="services.html">Full Detail</a></li>
+                        <li><a href="services.html">Executive Detail</a></li>
+                        <li><a href="services.html">Paint Correction</a></li>
+                        <li><a href="services.html">Add-On Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="tel:720-763-2136">(720) 763-2136</a></p>
+                    <p><a href="mailto:chris@apexautostudio303.com">chris@apexautostudio303.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Apex Auto Studio. All rights reserved.</p>
+                <a href="https://www.obsidion.ai/" target="_blank" class="footer-credit">Built by Obsidion</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
