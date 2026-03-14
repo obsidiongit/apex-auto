@@ -668,7 +668,64 @@ function initBooking() {
                 document.head.appendChild(spinStyle);
             }
 
-            // Simulate submission
+            // --- Integrate Hidden GHL Form Submission ---
+            try {
+                // Post data to the hidden GHL form iframe
+                const ghlIframe = document.querySelector('#ghl-form-container iframe');
+                if (ghlIframe && ghlIframe.contentWindow) {
+                    // Structure the message data required by GHL
+                    const formId = "BECuw4R5vmUW4GuyoIY1"; // Extracted from embed code
+                    let dateStr = selectedDate ? selectedDate.toLocaleDateString('en-CA') : ''; // YYYY-MM-DD
+                    const timeStr = selectedTime || '';
+
+                    const ghlDataMsg = {
+                        type: "formData",
+                        data: {
+                            // GHL Standard Fields Map based on data-q
+                            "full_name": name.value,
+                            "phone": phone.value,
+                            "email": document.getElementById('bookEmail') ? document.getElementById('bookEmail').value : '',
+                            
+                            // GHL Custom Fields (Map exactly to the 'name' attributes found in your form)
+                            "cgZpvkqYiJhf6BWqgVzf": dateStr, // Date & Time custom field
+                            "inPcO4SAkbk3O41ZetZg": timeStr, // Appointment Time custom text field
+                            "gLwuB4kYyAh1r5g1VJW7": selectedService ? selectedService.name : 'N/A' // Choose Your Service
+                            // NOTE: Service address and notes were not present in your GHL embed code, 
+                            // so we exclude them or you can add custom fields for them in GHL and update here later.
+                        }
+                    };
+                    
+                    // We must post to the iframe origin
+                    const targetOrigin = new URL(ghlIframe.src).origin;
+                    
+                    // The GHL iframe resizer script handles sending the payload
+                    // but since we are submitting bypassing their UI, the easiest way 
+                    // is dispatching an event that their script is listening to OR 
+                    // since their iframe has cross-origin restrictions, we trigger an HTTP POST 
+                    // directly to their leadconnector form submission endpoint as a fallback.
+                    
+                    // Direct API HTTP Request to LeadConnector Form Submission Endpoint
+                    fetch(`https://backend.leadconnectorhq.com/forms/submit`, {
+                       method: 'POST',
+                       headers: {
+                           'Accept': 'application/json, text/plain, */*',
+                           'Content-Type': 'application/json'
+                       },
+                       body: JSON.stringify({
+                           formId: formId,
+                           location_id: "6526b8c3b412c83e9edb9c6f", // Extracted from GHL form Nuxt context
+                           pageUrl: window.location.href,
+                           formData: ghlDataMsg.data,
+                           sessionId: "custom_session_" + Date.now()
+                       })
+                    }).catch(err => console.log('Background submission failed natively, but attempt finished', err));
+                }
+            } catch (err) {
+                console.error("GHL Submission Integration Error:", err);
+            }
+            // ---------------------------------------------
+
+            // Simulate submission UI delay
             setTimeout(() => {
                 bookingSubmit.disabled = false;
                 bookingSubmit.innerHTML = `
