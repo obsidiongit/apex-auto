@@ -209,6 +209,7 @@ button {
     background: var(--charcoal);
     box-shadow: var(--shadow-sm);
     transition: var(--transition-base);
+    overflow: visible;
 }
 
 .navbar.scrolled {
@@ -218,27 +219,98 @@ button {
 .nav-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: var(--space-md) var(--space-xl);
+    padding: 6px var(--space-xl);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
 }
 
 .logo {
     display: flex;
     align-items: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+    /* Reserve width so a visually scaled logo doesn’t overlap nav links */
+    min-width: min(400px, 62vw);
 }
 
 .nav-logo-img {
-    height: 100px;
+    /* Layout height stays small; scale() enlarges the mark without growing the bar */
+    height: 48px;
     width: auto;
+    display: block;
+    /* Fine-tune vertical position after scale (balances optical center in the bar) */
+    transform: scale(3.44) translateY(2px);
+    transform-origin: left center;
+}
+
+/* Tablet: full 2× nav mark is too wide next to links; step down slightly */
+@media (min-width: 769px) and (max-width: 1099px) {
+    .nav-logo-img {
+        transform: scale(2.85) translateY(2px);
+    }
+
+    .logo {
+        min-width: min(320px, 40vw);
+    }
+}
+
+@media (min-width: 1100px) {
+    .nav-logo-img {
+        transform: scale(3.45) translateY(2px);
+    }
+
+    .logo {
+        min-width: min(400px, 38vw);
+    }
+}
+
+@media (min-width: 1400px) {
+    .nav-logo-img {
+        transform: scale(3.75) translateY(2px);
+    }
+
+    .logo {
+        min-width: min(440px, 34vw);
+    }
 }
 
 .nav-menu {
+    /* True viewport-center for links; grid 1fr/1fr was skewed by unequal logo vs CTA min-widths */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     gap: var(--space-lg);
+    z-index: 3;
+}
+
+/* Tighter header when logo + links + phone/CTA compete for width */
+@media (min-width: 769px) and (max-width: 1320px) {
+    .nav-container {
+        gap: var(--space-md);
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+
+    .nav-menu {
+        gap: var(--space-sm);
+    }
+
+    .nav-actions {
+        gap: var(--space-md);
+    }
+
+    .nav-link {
+        padding: var(--space-sm) var(--space-sm);
+    }
 }
 
 .mobile-only {
@@ -270,14 +342,18 @@ button {
     display: flex;
     align-items: center;
     gap: var(--space-lg);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .nav-phone {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
     font-weight: 600;
     color: var(--white);
+    white-space: nowrap;
 }
 
 .phone-icon-wrapper {
@@ -335,6 +411,7 @@ button {
     color: var(--white);
     padding: var(--space-md) var(--space-lg);
     font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 .btn-nav-cta:hover {
@@ -645,7 +722,7 @@ button {
 }
 
 .hero-logo {
-    max-width: 400px;
+    max-width: 800px;
     width: 100%;
     filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 60px rgba(255, 255, 255, 0.5)) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
     animation: floatLogo 4s ease-in-out infinite;
@@ -1340,7 +1417,7 @@ button {
 }
 
 .business-card-logo {
-    width: 150px;
+    width: 300px;
     height: auto;
     margin-bottom: var(--space-lg);
 }
@@ -1458,7 +1535,7 @@ button {
 }
 
 .footer-logo-img {
-    height: 60px;
+    height: 120px;
     width: auto;
     margin-bottom: var(--space-md);
 }
@@ -1563,7 +1640,7 @@ button {
     }
 
     .hero-logo {
-        max-width: 280px;
+        max-width: 560px;
     }
 
     .hero-desc {
@@ -1640,9 +1717,30 @@ button {
         display: none;
     }
 
+    .nav-container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px var(--space-md);
+        gap: var(--space-md);
+    }
+
+    .nav-menu {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        z-index: auto;
+    }
+
+    .logo {
+        /* Narrow screens: cap reserved space so logo + phone + menu fit */
+        min-width: min(210px, 52vw);
+    }
+
     .nav-logo-img {
-        height: 50px;
-        /* Resize logo for mobile */
+        height: 40px;
+        /* ~1.85× previous scale; full 2× would crowd the mobile controls */
+        transform: scale(2.8) translateY(1px);
     }
 
     .mobile-only {
@@ -1710,6 +1808,7 @@ button {
         top: 100%;
         left: 0;
         right: 0;
+        transform: none;
         background: var(--white);
         padding: var(--space-lg);
         box-shadow: var(--shadow-lg);
@@ -1729,7 +1828,7 @@ button {
     }
 
     .hero-logo {
-        max-width: 220px;
+        max-width: 440px;
     }
 
     .contact-bar {
