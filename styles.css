@@ -2239,12 +2239,14 @@ button {
 }
 
 .lead-hero-call-btn {
+    background: transparent !important;
     border-color: rgba(255, 255, 255, 0.4) !important;
     color: var(--white) !important;
 }
 
 .lead-hero-call-btn:hover {
     background: rgba(255, 255, 255, 0.15) !important;
+    color: var(--white) !important;
     border-color: var(--white) !important;
 }
 
